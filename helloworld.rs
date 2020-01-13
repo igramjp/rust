@@ -7,6 +7,7 @@ fn main() {
      */
     println!("hello, world."); // comment
 
+    /*
     let x = 1;
     println!("x = {}", x);
 
@@ -24,4 +25,24 @@ fn main() {
 
     let area = PI * radius * radius;
     println!("area = {}", area);
+    */
+
+    let x = 10;
+    let y = 3;
+    let mut z;
+
+    z = x + y;
+    println!("{} + {} = {}", x, y, z);
+
+    z = x - y;
+    println!("{} - {} = {}", x, y, z);
+
+    z = x * y;
+    println!("{} * {} = {}", x, y, z);
+
+    z = x / y;
+    println!("{} / {} = {}", x, y, z);
+
+    z = x % y;
+    println!("{} % {} = {}", x, y, z);
 }

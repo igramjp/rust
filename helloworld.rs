@@ -25,7 +25,6 @@ fn main() {
 
     let area = PI * radius * radius;
     println!("area = {}", area);
-    */
 
     let x = 10;
     let y = 3;
@@ -45,4 +44,33 @@ fn main() {
 
     z = x % y;
     println!("{} % {} = {}", x, y, z);
+
+    let x = (10 + 3) * 5 - (30 - 4) / 2;
+    println!("x = {}", x);
+
+    let x: i32 = 100000000;
+    println!("x = {}", x);
+    */
+
+    let dec = 25;
+    let bin = 0b11001;
+    let oct = 0o31;
+    let hex = 0x19;
+
+    println!("dec = {}", dec);
+    println!("bin = {}", bin);
+    println!("oct = {}", oct);
+    println!("hex = {}", hex);
+
+    let a: f64 = 1000.0;
+    let b: f64 = 33.0;
+    let c = 2.5;
+
+    let x = a / b;
+    let y = b / a;
+    let z = a / c;
+
+    println!("{} / {} = {}", a, b, x);
+    println!("{} / {} = {}", b, a, y);
+    println!("{} / {} = {}", a, c, z);
 }

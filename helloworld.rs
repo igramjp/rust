@@ -50,7 +50,6 @@ fn main() {
 
     let x: i32 = 100000000;
     println!("x = {}", x);
-    */
 
     let dec = 25;
     let bin = 0b11001;
@@ -73,4 +72,22 @@ fn main() {
     println!("{} / {} = {}", a, b, x);
     println!("{} / {} = {}", b, a, y);
     println!("{} / {} = {}", a, c, z);
+    */
+
+    let x: bool = true;
+    let y = false;
+
+    println!("x = {}", x);
+    println!("y = {}", y);
+
+    let c1: char = 'O';
+    let c2: char = 'h';
+    let c3: char = 'm';
+    let c4: char = '\n';
+    let c5 = 'R';
+    let c6 = 'u';
+    let c7 = 's';
+    let c8 = 't';
+
+    println!("{}{}{}{}{}{}{}{}", c1, c2, c3, c4, c5, c6, c7, c8);
 }

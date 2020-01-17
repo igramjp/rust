@@ -72,7 +72,6 @@ fn main() {
     println!("{} / {} = {}", a, b, x);
     println!("{} / {} = {}", b, a, y);
     println!("{} / {} = {}", a, c, z);
-    */
 
     let x: bool = true;
     let y = false;
@@ -90,4 +89,21 @@ fn main() {
     let c8 = 't';
 
     println!("{}{}{}{}{}{}{}{}", c1, c2, c3, c4, c5, c6, c7, c8);
+    */
+
+    let p = (10, 25);
+    println!("(x, y) = ({}, {})", p.0, p.1);
+
+    let q = (5, 10, 30);
+    println!("(x, y, z) = ({}, {}, {})", q.0, q.1, q.2);
+
+    let s = (80, 90, 85, true);
+    let (math, english, verbal, result) = s;
+    println!(
+        "(math, english, verbal, result) = ({}, {}, {}, {})",
+        math, english, verbal, result
+    );
+
+    let (_, _, _, result2) = s;
+    println!("result = {}", result2);
 }

@@ -89,7 +89,6 @@ fn main() {
     let c8 = 't';
 
     println!("{}{}{}{}{}{}{}{}", c1, c2, c3, c4, c5, c6, c7, c8);
-    */
 
     let p = (10, 25);
     println!("(x, y) = ({}, {})", p.0, p.1);
@@ -106,4 +105,60 @@ fn main() {
 
     let (_, _, _, result2) = s;
     println!("result = {}", result2);
+    */
+
+    let x = 20;
+
+    if x > 10 {
+        println!("x = {}", x);
+        println!("xの値は10より大きいです");
+    }
+
+    if (x + 30) >= 35 {
+        println!("x = {}", x);
+        println!("x+30の値は35以上です");
+    }
+
+    if true {
+        println!("条件が真なので必ず実行されます");
+    }
+
+    if x > 10 && x < 30 {
+        println!("x = {}", x);
+        println!("xの値は10より大きい，かつ30より小さいです");
+    }
+
+    if x <= 10 || x >= 30 {
+        println!("x = {}", x);
+        println!("xの値は10以下，または30以上です");
+    }
+
+    if !(x < 0) {
+        println!("x = {}", x);
+        println!("xは非負の値です");
+    }
+
+    let y = 5;
+
+    if y > 10 {
+        println!("x = {}", x);
+        println!("xの値は10より大きいです");
+    } else {
+        println!("x = {}", x);
+        println!("xの値は10以下です");
+    }
+
+    let score = 85;
+
+    if score >= 90 {
+        println!("成績はAです");
+    } else if score >= 80 {
+        println!("成績はBです");
+    } else if score >= 70 {
+        println!("成績はCです");
+    } else if score >= 60 {
+        println!("成績はDです");
+    } else {
+        println!("成績はEです");
+    }
 }

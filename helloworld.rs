@@ -1,11 +1,57 @@
 //! comment for module
 
 /// comment for function
+
+/*
+static PI: f64 = 3.14;
+
+fn get_cir(radius: f64) -> f64 {
+    2.0 * PI * radius
+}
+
+fn get_area(radius: f64) -> f64 {
+    PI * radius * radius
+}
+*/
+
+static mut PI: f64 = 3.14;
+
+fn get_cir(radius: f64) -> f64 {
+    unsafe { 2.0 * PI * radius }
+}
+
+fn get_area(radius: f64) -> f64 {
+    unsafe { PI * radius * radius }
+}
+
 fn main() {
+    let radius = 10.0;
+
+    unsafe {
+        PI = 3.0;
+    }
+
+    let cir = get_cir(radius);
+    let area = get_area(radius);
+
+    println!("cir = {}", cir);
+    println!("area = {}", area);
+
+    /*
+    let radius = 10.0;
+    let cir = get_cir(radius);
+    let area = get_area(radius);
+
+    println!("cir = {}", cir);
+    println!("area = {}", area);
+    */
+
     /*
      * comment
      */
+    /*
     println!("hello, world."); // comment
+    */
 
     /*
     let x = 1;
@@ -205,10 +251,46 @@ fn main() {
 
     let point = get_point(x, y);
     println!("point = ({}, {})", point.0, point.1);
-    */
 
     let var = factorial(5);
     println!("factorial of 5 = {}", var);
+
+    let mut x = 10;
+
+    if x < 0 {
+        let y = x + 1;
+        x = x + 1;
+        println!("y = {}", y);
+    } else {
+        let z = x - 1;
+        x = x - 1;
+        println!("z = {}", z);
+    }
+
+    println!("x = {}", x);
+
+    let mut x = 0;
+
+    for i in 0..3 {
+        for j in 0..3 {
+            let y = i * 10 + j;
+            x = x + 1;
+            println!("y = {}", y);
+        }
+
+        let j = 'a';
+        println!("j = {}", j);
+    }
+
+    println!("x = {}", x);
+
+    let mut x: i32 = 10;
+
+    func(x);
+
+    x = x / 2;
+    println!("main: x = {}", x);
+    */
 }
 
 /*
@@ -238,7 +320,6 @@ fn incr(cnt: i32) -> i32 {
 fn get_point(x: i32, y: i32) -> (i32, i32) {
     (x, y)
 }
-*/
 
 fn factorial(n: i32) -> i32 {
     if n == 1 {
@@ -247,3 +328,9 @@ fn factorial(n: i32) -> i32 {
         factorial(n - 1) * n
     }
 }
+
+fn func(mut x: i32) {
+    x = x * 2;
+    println!("func: x = {}", x);
+}
+*/

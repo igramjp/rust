@@ -176,7 +176,6 @@ fn main() {
         println!("i = {}", i);
         i += 1;
     }
-    */
 
     let mut i = 0;
     loop {
@@ -186,5 +185,65 @@ fn main() {
         if i == 9 {
             break;
         }
+    }
+
+    println!("user-defined function begin");
+    my_func();
+    add(10, 5);
+    let z = add_return(10, 5);
+    println!("10 + 5 = {}", z);
+    println!("user-defined function end");
+
+    let mut counter = 0;
+    for i in 0..10 {
+        counter = incr(counter);
+        println!("loop i = {} : counter = {}", i, counter);
+    }
+
+    let x = 10;
+    let y = 30;
+
+    let point = get_point(x, y);
+    println!("point = ({}, {})", point.0, point.1);
+    */
+
+    let var = factorial(5);
+    println!("factorial of 5 = {}", var);
+}
+
+/*
+fn my_func() {
+    println!("hello, world.");
+}
+
+fn add(x: i32, y: i32) {
+    let z = x + y;
+    println!("add({}, {}) = {}", x, y, z);
+}
+
+fn add_return(x: i32, y: i32) -> i32 {
+    x + y
+}
+
+fn incr(cnt: i32) -> i32 {
+    if cnt >= 8 {
+        println!("reset counter value");
+        return 1;
+    } else {
+        println!("add 1 counter value");
+        cnt + 1
+    }
+}
+
+fn get_point(x: i32, y: i32) -> (i32, i32) {
+    (x, y)
+}
+*/
+
+fn factorial(n: i32) -> i32 {
+    if n == 1 {
+        return 1;
+    } else {
+        factorial(n - 1) * n
     }
 }

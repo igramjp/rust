@@ -105,7 +105,6 @@ fn main() {
 
     let (_, _, _, result2) = s;
     println!("result = {}", result2);
-    */
 
     let x = 20;
 
@@ -160,5 +159,32 @@ fn main() {
         println!("成績はDです");
     } else {
         println!("成績はEです");
+    }
+
+    for i in 0..10 {
+        println!("i = {}", i);
+    }
+
+    for i in 0..5 {
+        for j in 0..5 {
+            println!("(i,j) = ({},{})", i, j);
+        }
+    }
+
+    let mut i = 0;
+    while i < 10 {
+        println!("i = {}", i);
+        i += 1;
+    }
+    */
+
+    let mut i = 0;
+    loop {
+        println!("i = {}", i);
+        i += 1;
+
+        if i == 9 {
+            break;
+        }
     }
 }

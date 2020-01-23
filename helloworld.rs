@@ -12,7 +12,6 @@ fn get_cir(radius: f64) -> f64 {
 fn get_area(radius: f64) -> f64 {
     PI * radius * radius
 }
-*/
 
 static mut PI: f64 = 3.14;
 
@@ -23,8 +22,25 @@ fn get_cir(radius: f64) -> f64 {
 fn get_area(radius: f64) -> f64 {
     unsafe { PI * radius * radius }
 }
+*/
+
+macro_rules! max {
+    ($x:expr, $y:expr) => {
+        if $x >= $y {
+            $x
+        } else {
+            $y
+        }
+    };
+}
 
 fn main() {
+    let x = 10;
+    let y = 20;
+    let z = max!(x, y);
+
+    println!("x = {}, y = {}, max = {}", x, y, z);
+    /*
     let radius = 10.0;
 
     unsafe {
@@ -37,7 +53,6 @@ fn main() {
     println!("cir = {}", cir);
     println!("area = {}", area);
 
-    /*
     let radius = 10.0;
     let cir = get_cir(radius);
     let area = get_area(radius);

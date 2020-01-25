@@ -40,6 +40,29 @@ fn main() {
     let z = max!(x, y);
 
     println!("x = {}, y = {}, max = {}", x, y, z);
+
+    let val: i32 = 200;
+
+    println!("binary: val = {:b}", val);
+    println!("octal: val = {:o}", val);
+    println!("hexadecimal(lowercase): val = {:x}", val);
+    println!("hexadecimal(uppercase): val = {:X}", val);
+
+    let a = 10;
+    let b = 20;
+
+    println!("a = {first:x}, b = {second:x}", second = b, first = a);
+
+    let min_i8 = i8::min_value();
+    let max_i8 = i8::max_value();
+
+    println!("i8: {} ~ {}", min_i8, max_i8);
+
+    let x_i8: i8 = 0b01001110;
+    let y_i8: i8 = x_i8.rotate_left(3);
+
+    println!("y = {:b}", y_i8);
+
     /*
     let radius = 10.0;
 

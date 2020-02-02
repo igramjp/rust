@@ -1,7 +1,60 @@
-use std::env;
+// use std::env;
 // use std::io;
 
+// use std::fs;
+// use std::io;
+// use std::io::Write;
+
+// use std::fs::File;
+// use std::io::BufRead;
+// use std::io::BufReader;
+
+// use std::fs;
+// use std::io;
+// use std::io::BufWriter;
+// use std::io::Write;
+
+use std::fs::OpenOptions;
+use std::io;
+use std::io::BufWriter;
+use std::io::Write;
+
 fn main() {
+    let mut writer = BufWriter::new(
+        OpenOptions::new()
+            .create(true)
+            .append(true)
+            .open("append.txt")
+            .unwrap(),
+    );
+
+    println!("ファイルに書き込む文字列を入力してください>");
+    let mut s = String::new();
+    io::stdin().read_line(&mut s).ok();
+
+    writer.write(s.as_bytes()).unwrap();
+    println!("ファイルへの書き込みが終了しました");
+    /*
+    let mut writer = BufWriter::new(fs::File::create("output2.txt").unwrap());
+
+    println!("ファイルに書き込む文字列を入力してください");
+    let mut s = String::new();
+    io::stdin().read_line(&mut s).ok();
+
+    writer.write(s.as_bytes()).unwrap();
+    println!("ファイルへの書き込みが終了しました");
+    */
+
+    /*
+    let mut reader = BufReader::new(File::open("input2.txt").unwrap());
+
+    let mut buff = String::new();
+    while reader.read_line(&mut buff).unwrap() > 0 {
+        print!("{}", buff);
+        buff.clear();
+    }
+    */
+
     /*
     println!("Please input string >");
 
@@ -32,6 +85,7 @@ fn main() {
     println!("{:?}", args);
     */
 
+    /*
     let args: Vec<String> = env::args().collect();
 
     let op: &str = args[1].as_str();
@@ -49,4 +103,24 @@ fn main() {
     } else {
         println!("演算子が不正です");
     }
+    */
+
+    /*
+    let s = fs::read_to_string("input1.txt").unwrap();
+    println!("input1.txt\n{}", s);
+    */
+
+    /*
+    let mut file = fs::File::create("output1.txt").unwrap();
+
+    println!("ファイルに書き込む文字列を入力してください>");
+    let mut s = String::new();
+    io::stdin().read_line(&mut s).ok();
+
+    let size = file.write(s.as_bytes()).unwrap();
+    println!(
+        "ファイルへの書き込みが終了しました. bytes = {}",
+        size
+    );
+    */
 }
